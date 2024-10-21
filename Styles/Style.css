@@ -1,0 +1,148 @@
+.container{
+    display: grid;
+    grid-template-columns: 350px 350px 350px ;
+    gap: 100px 140px;
+    padding: 30px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+body{
+    background-color: rgb(207, 224, 238);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header h2{
+    text-align: center;
+    padding: 20px;
+    background-color: lightpink;
+    width: 100%;
+    height: auto;
+    margin: 0px; 
+    border: 3px solid black;
+}
+
+.book{
+    padding: 10px;
+    border: 3px solid black;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    background-color: thistle ;
+}
+
+.book img{
+    width: 100%;
+    height: auto;
+}
+
+.book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+table{
+    width: 100%;
+    border-collapse: separate;
+    text-align: left;
+    display: block; 
+    padding: 20px;
+    border: 3px solid black;
+}
+
+td{
+    padding: 10px;
+}
+
+tr{
+    border-bottom: 3px solid black;
+}
+
+.table-container{
+    overflow: auto;
+}
+
+thead{
+    font-weight: bold;
+    background-color: cadetblue;
+}   
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 10px;
+    border: 2px solid black;
+    background-color: aliceblue;
+}
+
+label{
+    font-weight: bold;
+}
+
+input, select, textarea{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(106, 163, 165);
+}
+
+button:hover{
+    background-color: rgb(77, 135, 137);
+}
+
+footer{
+    margin-top: 10px;
+    background-color: lightpink;
+    border: 3px solid black;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        display: grid;
+        grid-template-columns: 75%;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    table{
+        border: none;
+    }
+    
+    table thead, tbody, tfoot,th,td,tr{
+        display: block;
+        width: 100%;
+        background-color: rgb(236, 195, 193);
+    }
+
+    tr{
+        padding: 20px;
+    }
+
+    table thead{
+        display: none;
+    }
+
+    .book{
+        font-weight: bold;
+    }
+
+    table td{
+        border-bottom: 2px solid black;
+    }
+
+    table td::before{
+        content: attr(data-label);
+        font-weight: bold;
+    }
+}
